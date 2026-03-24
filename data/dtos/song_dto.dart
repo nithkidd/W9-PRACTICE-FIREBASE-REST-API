@@ -13,10 +13,11 @@ class SongDto {
     assert(json[imageURLKey] is String);
 
     return Song(
+      id: id,
       title: json[titleKey],
       artistId: json[artistIdKey],
       duration: Duration(milliseconds: json[durationKey]),
-      imageURL: Uri.parse(json[imageURLKey]),
+      imageURL: Uri.parse(json[imageURLKey]), 
     );
   }
 
